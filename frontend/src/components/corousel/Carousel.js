@@ -8,7 +8,7 @@ const ProductCarousel = ({ products }) => {
   return (
     <div>
         <Carousel
-        showDots={true}
+        showDots={true} 
         responsive={responsive}
         infinite={true}
         autoPlay={true}

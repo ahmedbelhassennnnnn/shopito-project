@@ -4,7 +4,8 @@ import "./Home.scss" ;
 import HomeInfobox from './HomeInfobox';
 import { productData } from '../../components/corousel/data';
 import carouselItem from '../../components/corousel/carouselItem.js';
-
+import ProductCarousel from '../../components/corousel/Carousel.js';
+;
 
 const PageHeading = ({heading, btnText}) => { 
   return (
@@ -25,7 +26,10 @@ const Home = () => {
   const productss = productData.map((item, index)=>{
     <div key ={item.id}>
 <carouselItem
-
+name={item.name}
+url={item.imageurl}
+price={item.price}
+description={item.description}
 />
     </div>
   } )
@@ -37,6 +41,7 @@ const Home = () => {
       <HomeInfobox />
       <PageHeading heading={"Latest Products"} btnText={"Shop Now "} />
       </div>
+      <ProductCarousel products={productss}/>
       </section>
     </>
   );
